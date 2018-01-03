@@ -2,7 +2,11 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const { createJWT, randomString } = require('./helpers');
 const readline = require('readline');
-require('dotenv').config({ path: 'variables.env' });
+
+if (process.env.NODE_ENV === 'development') {
+  require('dotenv').config({ path: 'variables.env' })
+}
+
 require('./models/User');
 
 mongoose.connect(process.env.DATABASE)

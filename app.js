@@ -2,7 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
-require('dotenv').config({ path: 'variables.env' })
+
+if (process.env.NODE_ENV === 'development') {
+  require('dotenv').config({ path: 'variables.env' })
+}
 
 mongoose.connect(process.env.DATABASE)
 mongoose.Promise = global.Promise
