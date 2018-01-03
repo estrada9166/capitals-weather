@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon ./app.js",
     "start": "node ./app.js",
-    "test": "mocha --timeout 20000"
+    "test": "mocha --timeout 20000",
+    "create-user": "NODE_ENV=development node ./createUser.js"
   },
   "engines": {
     "node": "8"

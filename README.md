@@ -15,7 +15,7 @@ Remove `e.g` from the `variables.env.eg` file
 ### Create User
 To create a new user on the data base just run
 ```bash
-$ node createUser.js
+$ npm run create-user
 ```
 It will ask for an email an a password to create the user on the databe
 
